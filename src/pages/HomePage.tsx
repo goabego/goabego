@@ -1,7 +1,10 @@
+import { Resume } from "@/components/resume";
+
 export function HomePage() {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Hello World</h1>
+    // <div className="flex items-center justify-center h-screen">
+    <div>
+      <Resume />
     </div>
   );
 }

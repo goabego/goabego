@@ -7,7 +7,7 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="container mx-auto p-4">
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-bold">My App</h1>
+          <h1 className="text-2xl font-bold">@goabego</h1>
           <ModeToggle />
         </div>
         <HomePage />
