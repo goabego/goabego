@@ -123,3 +123,39 @@
 - [Tailwind CSS Showcase](https://tailwindcss.com/showcase): Showcases various websites built with Tailwind CSS to inspire developers.
 - [Object Fit Utilities](https://tailwindcss.com/docs/object-fit): Explains usage of Tailwind CSS utilities for controlling object fit in responsive design.
 
+---
+
+## Project: React + Vite + Tailwind CSS + Shadcn/UI Template
+
+This section provides context for the AI assistant about the current project.
+
+### Tech Stack
+
+-   **Framework:** React with Vite
+-   **Styling:** Tailwind CSS
+-   **Components:** Shadcn/UI
+-   **Testing:** Vitest with React Testing Library
+-   **Linting:** ESLint
+-   **Package Manager:** npm
+
+### Common Commands
+
+-   **Start development server:** `npm run dev`
+-   **Run tests:** `npm test`
+-   **Build for production:** `npm run build`
+-   **Run linter:** `npm run lint`
+
+### Folder Structure
+
+-   `src/pages`: Contains page components. Tests for pages are in `src/pages/__tests__`.
+-   `src/components`: Contains UI components, separated into `ui` (from Shadcn/UI) and `theme`.
+-   `src/lib`: Contains utility functions.
+-   `src/test`: Contains testing setup files.
+-   `vitest.config.ts`: Vitest configuration file. Path aliases are configured here.
+
+### Conventions
+
+-   Use path aliases `@/*` to refer to files in `src/`.
+-   Component tests are co-located with the component in a `__tests__` directory.
+-   Follow existing coding style and conventions.
+
