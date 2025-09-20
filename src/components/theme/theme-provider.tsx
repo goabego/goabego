@@ -34,6 +34,7 @@ export function ThemeProvider({
         : "light";
 
       root.classList.add(systemTheme);
+      root.classList.add("circular-wipe-in")
       return;
     }
 
