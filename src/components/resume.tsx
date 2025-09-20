@@ -1,4 +1,10 @@
+import { useTheme } from "@/components/theme/theme-context";
+import { cn } from "@/lib/utils";
+import heroAbe from "@/assets/hero-abe.jpg";
+
 export function Resume() {
+  const { theme, setTheme } = useTheme();
+
   return (
     // Main container for the resume component, styled as a card with a border and shadow.
     <div className="rounded-xl border text-card-foreground shadow bg-background flex min-h-screen flex-col overflow-hidden">
@@ -19,18 +25,39 @@ export function Resume() {
           <header className="space-y-6">
             <div className="flex flex-wrap gap-2">
               {/* Tags related to the article content. */}
-              <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80">
-                Builder
-              </div>
-              <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80">
-                Sales
-              </div>
-              <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80">
-                Investor
-              </div>
-              <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80">
-                Baker
-              </div>
+              <button
+                onClick={() => setTheme("projects")}
+                className={cn(
+                  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80",
+                  {
+                    "bg-secondary/80": theme === "projects",
+                  }
+                )}
+              >
+                Projects & Work
+              </button>
+              <button
+                onClick={() => setTheme("investing")}
+                className={cn(
+                  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80",
+                  {
+                    "bg-secondary/80": theme === "investing",
+                  }
+                )}
+              >
+                VC & Investing
+              </button>
+              <button
+                onClick={() => setTheme("baking")}
+                className={cn(
+                  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground hover:bg-secondary/80",
+                  {
+                    "bg-secondary/80": theme === "baking",
+                  }
+                )}
+              >
+                Baking & More Baking
+              </button>
             </div>
             {/* The main title of the article. */}
             <h1 className="text-4xl leading-tight font-bold tracking-tight @md:text-5xl @lg:text-6xl">
@@ -50,7 +77,7 @@ export function Resume() {
                   <img
                     className="aspect-square h-full w-full"
                     alt="Author"
-                    src="/placeholder.svg?height=48&width=48"
+                    src={heroAbe}
                   />
                 </span>
                 <div>
@@ -123,7 +150,7 @@ export function Resume() {
               decoding="async"
               data-nimg="fill"
               className="object-cover"
-              src="/placeholder.svg?height=600&width=1200"
+              src={heroAbe}
               style={{
                 position: "absolute",
                 height: "100%",
@@ -300,7 +327,7 @@ export function Resume() {
                   <img
                     className="aspect-square h-full w-full"
                     alt="Author"
-                    src="/placeholder.svg?height=64&width=64"
+                    src={heroAbe}
                   />
                 </span>
                 <div className="flex-1">
