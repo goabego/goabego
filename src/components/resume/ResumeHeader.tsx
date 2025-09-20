@@ -1,7 +1,7 @@
 import { useTheme } from "@/components/theme/theme-context";
 import { cn } from "@/lib/utils";
 import heroAbe from "@/assets/hero-abe.jpg";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { SocialLinks } from "../SocialLinks";
 
 export function ResumeHeader() {
   const { theme, setTheme } = useTheme();
@@ -56,7 +56,7 @@ export function ResumeHeader() {
       {/* Author and publication details section. */}
       <div className="flex flex-col justify-between gap-4 pt-4 @sm:flex-row @sm:items-center">
         <div className="flex items-center gap-3">
-          <span className="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12">
+          <span className="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16">
             <img
               className="aspect-square h-full w-full"
               alt="Author"
@@ -71,18 +71,7 @@ export function ResumeHeader() {
           </div>
         </div>
         
-        {/* Social media links */}
-        <div className="text-muted-foreground flex items-center gap-4 text-sm">
-          <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
-            <Twitter className="h-6 w-6 hover:text-primary transition-colors" />
-          </a>
-          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
-            <Linkedin className="h-6 w-6 hover:text-primary transition-colors" />
-          </a>
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
-            <Github className="h-6 w-6 hover:text-primary transition-colors" />
-          </a>
-        </div>
+        <SocialLinks />
       </div>
     </header>
   );

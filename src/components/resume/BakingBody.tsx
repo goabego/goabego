@@ -1,4 +1,4 @@
-import heroAbe from "@/assets/hero-abe.jpg";
+import bread1 from "@/assets/bread/bread5.jpg";
 
 export function BakingBody() {
   return (
@@ -11,7 +11,7 @@ export function BakingBody() {
           decoding="async"
           data-nimg="fill"
           className="object-cover"
-          src={heroAbe}
+          src={bread1}
           style={{
             position: "absolute",
             height: "100%",
