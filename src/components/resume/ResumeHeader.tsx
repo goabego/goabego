@@ -1,6 +1,7 @@
 import { useTheme } from "@/components/theme/theme-context";
 import { cn } from "@/lib/utils";
 import heroAbe from "@/assets/hero-abe.jpg";
+import { Twitter, Linkedin, Github } from "lucide-react";
 
 export function ResumeHeader() {
   const { theme, setTheme } = useTheme();
@@ -63,58 +64,24 @@ export function ResumeHeader() {
             />
           </span>
           <div>
-            <p className="font-semibold">Jane Doe</p>
+            <p className="font-semibold">Abraham Gomez</p>
             <p className="text-muted-foreground text-sm">
-              Senior Developer
+              Strategic Startups & Host @ Google
             </p>
           </div>
         </div>
-        {/* Publication date and reading time. */}
+        
+        {/* Social media links */}
         <div className="text-muted-foreground flex items-center gap-4 text-sm">
-          <div className="flex items-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-calendar h-4 w-4"
-            >
-              <path d="M8 2v4"></path>
-              <path d="M16 2v4"></path>
-              <rect
-                width="18"
-                height="18"
-                x="3"
-                y="4"
-                rx="2"
-              ></rect>
-              <path d="M3 10h18"></path>
-            </svg>
-            <span>Dec 15, 2024</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="lucide lucide-clock h-4 w-4"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <span>8 min read</span>
-          </div>
+          <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
+            <Twitter className="h-6 w-6 hover:text-primary transition-colors" />
+          </a>
+          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
+            <Linkedin className="h-6 w-6 hover:text-primary transition-colors" />
+          </a>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-transparent p-1 transition-colors hover:border-primary">
+            <Github className="h-6 w-6 hover:text-primary transition-colors" />
+          </a>
         </div>
       </div>
     </header>
